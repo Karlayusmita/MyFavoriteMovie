@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MyFavoriteMovie</string>
+    <string name="poster">This is Poster</string>
+    <string name="vote_count">Vote Count</string>
+    <string name="release_date">Release Date</string>
+    <string name="movie_title">Movie Title</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+</resources>
