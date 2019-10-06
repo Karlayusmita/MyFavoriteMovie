@@ -17,5 +17,9 @@
             </intent-filter>
         </activity>
     </application>
+    <uses-permission android:name="com.example.mymoviecatalougesub5.READ_DATABASE" />
+    <uses-permission android:name="com.example.mymoviecatalougesub5.WRITE_DATABASE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

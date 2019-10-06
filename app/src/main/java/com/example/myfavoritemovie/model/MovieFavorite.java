@@ -4,6 +4,17 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class MovieFavorite implements Parcelable {
+    public static final Creator<MovieFavorite> CREATOR = new Creator<MovieFavorite>() {
+        @Override
+        public MovieFavorite createFromParcel(Parcel in) {
+            return new MovieFavorite(in);
+        }
+
+        @Override
+        public MovieFavorite[] newArray(int size) {
+            return new MovieFavorite[size];
+        }
+    };
     private int id;
     private String poster;
     private String title;
@@ -12,7 +23,7 @@ public class MovieFavorite implements Parcelable {
     private String overview;
     private int voteAverage;
 
-    public MovieFavorite(int id, String poster, String title, String originalLanguage, String releaseDate, String overview, int voteAverage ){
+    public MovieFavorite(int id, String poster, String title, String originalLanguage, String releaseDate, String overview, int voteAverage) {
         this.id = id;
         this.title = title;
         this.overview = overview;
@@ -31,18 +42,6 @@ public class MovieFavorite implements Parcelable {
         this.overview = in.readString();
         this.voteAverage = in.readInt();
     }
-
-    public static final Creator<MovieFavorite> CREATOR = new Creator<MovieFavorite>() {
-        @Override
-        public MovieFavorite createFromParcel(Parcel in) {
-            return new MovieFavorite(in);
-        }
-
-        @Override
-        public MovieFavorite[] newArray(int size) {
-            return new MovieFavorite[size];
-        }
-    };
 
     public int getId() {
         return id;

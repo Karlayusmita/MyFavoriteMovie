@@ -26,10 +26,10 @@ public class MappingHelper {
             String releaseDate = notesCursor.getString(notesCursor.getColumnIndexOrThrow(RELEASE_DATE));
             String overview = notesCursor.getString(notesCursor.getColumnIndexOrThrow(OVERVIEW));
             int voteAverage = notesCursor.getInt(notesCursor.getColumnIndexOrThrow(VOTE_AVERAGE));
-            movieList.add(new MovieFavorite( id, poster, title,  originalLanguage,  releaseDate, overview, voteAverage ));
+            movieList.add(new MovieFavorite(id, poster, title, originalLanguage, releaseDate, overview, voteAverage));
         }
 
 
-            return movieList;
+        return movieList;
     }
 }
